@@ -1,0 +1,43 @@
+{
+    "name": "tyhpdef/phpstan-phpstan-impl",
+    "description": "Implementation package for tyhpdef/phpstan-phpstan. Require tyhpdef/phpstan-phpstan, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "2.2.14.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/nikic-php-parser": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/phpstan-phpstan"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "phpstan/phpstan": "^2.0"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/nikic-php-parser": "@dev"
+    }
+}
